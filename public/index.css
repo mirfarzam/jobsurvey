@@ -1,0 +1,9 @@
+html,
+body {
+    margin: 50px 0 0;
+    padding: 0;
+    font-family: iraniansans, sans-serif;
+    background-color: #f9fafc;
+    color: #4a4849;
+    direction: rtl;
+}

@@ -1,0 +1,41 @@
+input[type="text"] {
+    width: 350px;
+    height: 42px;
+    border-radius: 4px;
+    border: solid 2px #dfe1e6;
+    background-color: #ffffff;
+    padding: 11px 16px;
+}
+input:focus {
+    outline: none;
+}
+
+.border-pink {
+    border : 2px solid #f5cedb;
+    color : #f5cedb;
+}
+
+.back-pink {
+    color: white;
+    background-color: #f5cedb !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.company {
+    cursor: pointer;
+    margin:5px;
+    width: fit-content;
+    padding: 11px 16px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
