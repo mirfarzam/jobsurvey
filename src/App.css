@@ -11,13 +11,13 @@ input:focus {
 }
 
 .border-pink {
-    border : 2px solid #f5cedb;
-    color : #f5cedb;
+    border : 2px solid #63a583;
+    color : #63a583;
 }
 
 .back-pink {
     color: white;
-    background-color: #f5cedb !important;
+    background-color: #63a583 !important;
 }
 
 .noselect {
@@ -38,4 +38,5 @@ input:focus {
     background-color: white;
     border-radius: 4px;
     transition: all 0.15s;
+    display: inline-flex;
 }

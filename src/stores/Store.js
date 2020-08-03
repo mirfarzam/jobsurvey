@@ -1,17 +1,11 @@
 import {observable, action, computed} from 'mobx'
 import TodoModel from "./TodoModel";
+import DATA from '../data'
 
 class Store {
     @observable selectedCompanies = []
-    @action
-    addCompany(companyName) {
-        if(this.selectedCompanies.length <= 2) {
-            this.selectedCompanies.push(companyName)
-            console.log(this.selectedCompanies)
-            return true
-        }
-        return false
-    }
+    @observable input = ""
+    @observable companies = DATA.companies
 
     @action
     toggleCompany(companyName) {
@@ -24,7 +18,15 @@ class Store {
             return true
         }
         return false
-        console.log(this.selectedCompanies)
+    }
+
+    @action
+    searchCompany(value) {
+        if(value.length > 1) {
+            this.companies = DATA.companies.filter(name => name.indexOf(value) > -1)
+        } else {
+            this.companies = DATA.companies.slice(0,10)
+        }
     }
 }
 

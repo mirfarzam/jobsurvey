@@ -3,6 +3,8 @@ import {observer} from 'mobx-react'
 import './App.css';
 import store from "./stores/Store";
 import CompanyChoiceItem from "./components/CompanyChoiceItem";
+import DATA from './data'
+import CompanySearchInput from "./components/CompanySearchInput";
 
 
 @observer
@@ -30,16 +32,15 @@ class App extends Component {
                 <div className={"row d-flex justify-content-center"}>
                     <div className={"col-md-8 col-sm-12 text-center"}>
                         <form>
-
-                            <label>
-                                لطفا اسم‌ شرکت‌هایی که دوست داری توشون کار کنی رو انتخاب کن!
-                                <input type={"text"}/>
-                            </label>
+                            <CompanySearchInput />
                             <div className={"text-center"}>
-                                <CompanyChoiceItem name={"دیجیکالا"}/>
-                                <CompanyChoiceItem name={"اسنپ"}/>
-                                <CompanyChoiceItem name={"اسنپ‌فود"}/>
-                                <CompanyChoiceItem name={"ورزش‌۳"}/>
+                                {
+                                    store.companies.map((name)=>{
+                                        return(
+                                            <CompanyChoiceItem name={name}/>
+                                        )
+                                    })
+                                }
                             </div>
 
                         </form>
